@@ -1,11 +1,11 @@
-# passport-mailapp
+# passport-mailru
 
 [Passport](http://passportjs.org/) strategy for authenticating with [Mail.ru](http://mail.ru/)
 using the OAuth 2.0 API.
 
 ## Install
 
-    $ npm install passport-mailapp
+    $ npm install github:Pashted/passport-mailru#main
 
 ## Usage
 
@@ -17,7 +17,7 @@ access their data, given their access permission.
 In order to be used, a strategy must be configured with two parameters.
 
 ```javascript
-const MailruStrategy = require("passport-mailapp").Strategy;
+const MailruStrategy = require("passport-mailru").Strategy;
 passport.use(new MailruStrategy(options, verify));
 ```
 
@@ -91,7 +91,7 @@ return done(new Error("User database is not available, try later"));
 ```
 
 ```javascript
-const MailruStrategy = require("passport-mailapp").Strategy;
+const MailruStrategy = require("passport-mailru").Strategy;
 
 passport.use(
     new MailruStrategy(
@@ -131,11 +131,11 @@ application:
 
 ```javascript
 //This function will pass callback, scope and request new token
-app.get("/auth/mailru", passport.authenticate("mailapp"));
+app.get("/auth/mailru", passport.authenticate("mailru"));
 
 app.get(
     "/auth/mailru/callback",
-    passport.authenticate("mailapp", {
+    passport.authenticate("mailru", {
         successRedirect: "/",
         failureRedirect: "/login",
     })

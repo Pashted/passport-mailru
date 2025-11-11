@@ -1,22 +1,28 @@
 {
-  "name": "passport-mailapp",
-  "version": "0.0.4",
-  "description": "Mail.ru authentication strategy for Passport.",
+  "name": "passport-mailru",
+  "version": "1.0.0",
+  "description": "Mail.ru authentication strategy for Passport with TS support.",
   "author": {
     "name": "Ilya Maltsev",
     "email": "maidnmw@ya.ru"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/maidnmw/passport-mailapp.git"
+    "url": "git://github.com/Pashted/passport-mailru.git"
   },
   "bugs": {
-    "url": "http://github.com/maidnmw/passport-mailapp/issues"
+    "url": "http://github.com/Pashted/passport-mailru/issues"
   },
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "dependencies": {
-    "pkginfo": "0.3.x",
-    "passport-oauth2": "1.x.x"
+    "passport-oauth2": "^1.0.0",
+    "pkginfo": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/passport": "^1.0.17",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">= 0.4.0"
